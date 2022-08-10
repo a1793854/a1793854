@@ -1,11 +1,9 @@
 #ifndef HUMAN_H
 #define HUMAN_H
+#include "Player.h"
 #include <iostream>
 
-class Human {
-
- private:
-    char move;
+class Human : public Player {
 
  public:
     Human();
