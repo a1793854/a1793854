@@ -248,7 +248,7 @@ Player* Tournament::run(array<Player*, 8> competitors){
 
    }else {
 
-    return Round3players[0];
+    return Round3players[1];
 
    }
 }
