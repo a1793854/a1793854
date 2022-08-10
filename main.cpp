@@ -28,14 +28,14 @@ int main(void) {
 array<Player*,8> competitors;
 Tournament b;
 
-Player* p1 = new RandomComputer();
+Player* p1 = new Avalanche();
 Player* p2 = new Avalanche();
-Player* p3 = new Bureaucrat();
-Player* p4 = new Toolbox();
-Player* p5 = new Crescendo();
-Player* p6 = new PaperDoll();
-Player* p7 = new FistfullODollars(); 
-Player* p8 = new Toolbox();
+Player* p3 = new Avalanche();
+Player* p4 = new Avalanche();
+Player* p5 = new Avalanche();
+Player* p6 = new Bureaucrat();
+Player* p7 = new Avalanche(); 
+Player* p8 = new Avalanche();
 
 competitors = {p1, p2, p3, p4, p5, p6, p7, p8}; 
 

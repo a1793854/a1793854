@@ -25,7 +25,7 @@ char Referee::refGame(Player *player1, Player *player2) {
 
     cout << "\n";
     cout << outcome;
-    cout << "\n";
+    cout << "\n \n";
     
     return outcome;
 

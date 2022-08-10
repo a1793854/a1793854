@@ -147,7 +147,7 @@ Player* Tournament::run(array<Player*, 8> competitors){
 
    }else {
 
-    Round2players[3] = competitors[4];
+    Round2players[3] = competitors[6];
     p1wins = 0;
     p2wins = 0;
 
@@ -170,19 +170,19 @@ Player* Tournament::run(array<Player*, 8> competitors){
 
    if (p1wins > p2wins){
 
-    Round3players[0] = Round2players[1];
+    Round3players[0] = Round2players[0];
     p1wins = 0;
     p2wins = 0;
 
    }else if (p1wins < p2wins){
 
-    Round3players[0] = Round2players[2];
+    Round3players[0] = Round2players[1];
     p1wins = 0;
     p2wins = 0;
 
    }else {
 
-    Round3players[0] = Round2players[1];
+    Round3players[0] = Round2players[0];
     p1wins = 0;
     p2wins = 0;
 
@@ -225,7 +225,7 @@ Player* Tournament::run(array<Player*, 8> competitors){
 
    //R3p1 vs R3p2
    for(int i=0; i<5; i++){
-        char result = referee->refGame(Round2players[2], Round2players[3]); 
+        char result = referee->refGame(Round3players[0], Round3players[1]); 
             
         if (result == 'W') { 
 
