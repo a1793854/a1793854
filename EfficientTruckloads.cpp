@@ -12,7 +12,7 @@ EfficientTruckloads::EfficientTruckloads(){
 }
 
 int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
-  
+  /*
   // inititalize table 
   static int table[ROW][COLUMN];
 
@@ -45,7 +45,7 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
 
 return table[numCrates-1][loadSize-1];
 
-
+*/ return 0;
  
 }
 
