@@ -27,15 +27,13 @@ int Reverse::reverseDigit(int value){
 
 string Reverse::reverseString(string letters){
 
-  int length = letters.size()-1;
-
-  if (length == 0){ // base case
+  if (letters.size() == 1){ // base case
    
     return letters;
 
   }else { // recursive case
 
-    return letters[length] + reverseString(letters.substr(0,length));
+    return letters[letters.size() - 1] + reverseString(letters.substr(0, letters.size() - 1));
 
   }
    
