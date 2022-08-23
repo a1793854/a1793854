@@ -30,11 +30,7 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
   }
 
 
-  if (table[numCrates-1][loadSize-1] != -1) { // check if value already there
-
-    return table[numCrates-1][loadSize-1];
-
-  }else if (numCrates <= loadSize) { // base case
+  if (numCrates <= loadSize) { // base case
 
     table[numCrates-1][loadSize-1] = 1;
 
