@@ -9,10 +9,10 @@ Reverse::Reverse(){
 
 int Reverse::reverseDigit(int value){
 
-  if (value < 0) {
+  if (value < 0) { // invalid input
     return -1;
   }
-  
+
   int size = log10(value);
   int base =  pow(10, size);
 

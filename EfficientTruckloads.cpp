@@ -16,7 +16,7 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
   // inititalize table 
   static int table[ROW][COLUMN];
 
-  // fill vectors with -1;
+  // fill table with -1;
   memset(table, -1, sizeof(table));
 
  if (numCrates <= loadSize) { // base case
@@ -42,11 +42,15 @@ int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
   } 
 
 return table[numCrates-1][loadSize-1];
+
+
  
 }
 
 
-/*   // inititalize table of vetcors with row and columns
+/*   
+
+// inititalize table of vetcors with row and columns
   static vector<vector<int>> table(ROW);
   for (int i = 0 ; i < ROW; i++) {
 
@@ -61,7 +65,9 @@ return table[numCrates-1][loadSize-1];
       table[i][j]= -1;
 
     }
-  } */
+  } 
+  
+*/
 
 
 
