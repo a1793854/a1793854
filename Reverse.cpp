@@ -9,16 +9,11 @@ Reverse::Reverse(){
 
 int Reverse::reverseDigit(int value){
 
-  if (value <= 0) { // invalid input
-
-    return -1;
-
-  }
-
   int size = log10(value);
   int base =  pow(10, size);
 
-  if (value<= 9) { // base case
+
+  if (value <= 9) { // base case
 
         return value;
 
@@ -31,12 +26,6 @@ int Reverse::reverseDigit(int value){
 }
 
 string Reverse::reverseString(string letters){
-
-  if (letters.size() == 0) { // invalid input
-
-    return "ERROR";
-
-  }
 
   if (letters.size() == 1){ // base case
    
