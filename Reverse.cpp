@@ -9,18 +9,22 @@ Reverse::Reverse(){
 
 int Reverse::reverseDigit(int value){
 
-  int val = abs(value);
+  if (value <= 0) { // invalid input
 
-  int size = log10(val);
+    return -1;
+
+  }
+
+  int size = log10(value);
   int base =  pow(10, size);
 
-  if (val<= 9) { // base case
+  if (value<= 9) { // base case
 
-        return val;
+        return value;
 
     }else { // recursive case
 
-    return  (val % 10)*base + reverseDigit(val/10);
+    return  (value % 10)*base + reverseDigit(value/10);
 
 }
 
@@ -28,7 +32,12 @@ int Reverse::reverseDigit(int value){
 
 string Reverse::reverseString(string letters){
 
-  
+  if (letters.size() == 0) { // invalid input
+
+    return "ERROR";
+
+  }
+
   if (letters.size() == 1){ // base case
    
     return letters;
