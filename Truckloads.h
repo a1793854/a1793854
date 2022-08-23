@@ -6,11 +6,11 @@
 
 using namespace std;
 
-class TruckLoads{
+class Truckloads{
 
     public:
 
-    TruckLoads();
+    Truckloads();
 
     int numTrucks(int numCrates, int loadSize);
   

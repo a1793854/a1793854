@@ -1,13 +1,13 @@
-#include "TruckLoads.h"
+#include "Truckloads.h"
 #include <iostream>
 
 
-TruckLoads::TruckLoads(){
+Truckloads::Truckloads(){
 
 }
 
 
-int TruckLoads::numTrucks(int numCrates, int loadSize){
+int Truckloads::numTrucks(int numCrates, int loadSize){
 
 if(numCrates <= loadSize){ // base case
 

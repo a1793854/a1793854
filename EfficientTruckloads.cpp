@@ -5,6 +5,7 @@ using namespace std;
 
 #include <iostream>
 #include <vector>
+
 EfficientTruckloads::EfficientTruckloads(){
 
 }
