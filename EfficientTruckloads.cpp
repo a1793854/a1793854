@@ -1,7 +1,7 @@
 #include "EfficientTruckloads.h"
 using namespace std;
-#define ROW 10000
-#define COLUMN 10000
+//#define ROW 10000
+//#define COLUMN 10000
 
 #include <iostream>
 #include <vector>
@@ -11,7 +11,7 @@ EfficientTruckloads::EfficientTruckloads(){
 }
 
 int EfficientTruckloads::EfficientnumTrucks(int numCrates, int loadSize){
-
+  /*
   // inititalize table of vetcors with row and columns
   static vector<vector<int>> table(ROW);
   for (int i = 0 ; i < ROW; i++) {
@@ -51,7 +51,9 @@ int EfficientTruckloads::EfficientnumTrucks(int numCrates, int loadSize){
   } 
 
 return table[numCrates-1][loadSize-1];
+ */
 
+ return 0;
 }
 
 
