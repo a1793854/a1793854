@@ -5,13 +5,13 @@
 #include <string>
 
 
-class EfficientTruckloads{
+class  EfficientTruckloads{
 
     public:
 
     EfficientTruckloads();
 
-   unsigned long int EfficientnumTrucks(int numCrates, int loadSize);
+    int numTrucks(int numCrates, int loadSize);
   
 
 };

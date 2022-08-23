@@ -10,7 +10,7 @@ EfficientTruckloads::EfficientTruckloads(){
 
 }
 
-unsigned long int EfficientTruckloads::EfficientnumTrucks(int numCrates, int loadSize){
+int EfficientTruckloads::numTrucks(int numCrates, int loadSize){
   /*
   // inititalize table of vetcors with row and columns
   static vector<vector<int>> table(ROW);
