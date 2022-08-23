@@ -11,7 +11,7 @@ class EfficientTruckloads{
 
     EfficientTruckloads();
 
-    int EfficientnumTrucks(int numCrates, int loadSize);
+   unsigned long int EfficientnumTrucks(int numCrates, int loadSize);
   
 
 };
