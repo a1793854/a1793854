@@ -19,9 +19,11 @@ if(numCrates <= loadSize){ // base case
 
     return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2 + 1, loadSize);
 
-}else
+}else {
 
-    return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2, loadSize);
+     return numTrucks(numCrates/2, loadSize) + numTrucks(numCrates/2, loadSize);
+
+}
 
 }
 
