@@ -9,11 +9,15 @@ Truckloads::Truckloads(){
 
 int Truckloads::numTrucks(int numCrates, int loadSize){
 
-if ( (numCrates > 10000) || (loadSize > 10000) || (numCrates < 0) || (loadSize <= 0) ) { // invalid input
+if ( (numCrates == 0) && (loadSize == 0) ){
+    
+    return 0;
+
+}else if ( (numCrates > 10000) || (loadSize > 10000) || (numCrates < 0) || (loadSize <= 0) ) { // invalid input
 
     return -1;
 
-}
+} 
 
 if(numCrates <= loadSize){ // base case
 
