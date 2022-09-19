@@ -1,42 +1,43 @@
 #include "FilterGeneric.h"
 using namespace std;
 
-FilterGeneric::FilterGeneric(){
-
-  t = 0;
-
-}
-
-bool FilterGeneric::g(int x){ 
-    
-  return 0;
-    
-}
-
 vector<int> FilterGeneric::filter(vector<int> myVector){
 
-  static size_t size = myVector.size();
-
   // base case
-  if (t == size){
+  if (myVector.size( )== 0){
+
     return myVector;
+
   }
  
   // recursion case
   else{
+    vector<int> newVector; 
+    vector<int> restOfVector;
 
-    // Remove the last element.
-    if(g(myVector.back()) == true){
-      myVector.pop_back();
-      t++;
-    }else if(g(myVector.back()) == false){// Store and remove the last element.
-      myVector.insert(myVector.begin(),myVector.back());
-      myVector.pop_back();
-      t++;
+    // remove first value if true
+    if(g(myVector.front()) == true){
+
+      /// reduce given list size
+      myVector.erase(myVector.begin());
+      restOfVector = filter(myVector);
+      
+      // recursively process the remaining elements and append the modified values
+      restOfVector = filter(myVector);
+      newVector.insert(end(newVector), begin(restOfVector), end(restOfVector));
+
+    }else if(g(myVector.front()) == false){
+
+      // store modified value & reduce given list size
+      newVector = {myVector.front()};
+      myVector.erase(myVector.begin());
+
+      // recursively process the remaining elements and append the modified values
+      restOfVector = filter(myVector);
+      newVector.insert(end(newVector), begin(restOfVector), end(restOfVector));
     }
   
-    // Recursively process the remaining elements.
-    return filter(myVector);
+    return newVector;
   } 
 
 }

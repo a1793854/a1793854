@@ -7,11 +7,9 @@
 class FilterGeneric{
 
     private:
-    bool virtual g(int x);
-    size_t t;
+    virtual bool g(int x) = 0;
 
     public:
-    FilterGeneric();
     std::vector<int> filter(std::vector<int> myVector);
 
 };

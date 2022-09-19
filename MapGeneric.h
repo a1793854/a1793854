@@ -7,11 +7,9 @@
 class MapGeneric{
 
     private:
-    int virtual f(int x);
-    size_t t;
+    virtual int f(int x) = 0;
 
     public:
-    MapGeneric();
     std::vector<int> map(std::vector<int> myVector);
 
 };

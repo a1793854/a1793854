@@ -1,16 +1,6 @@
 #include "ReduceGeneric.h"
 using namespace std;
 
-ReduceGeneric::ReduceGeneric(){
-
-}
-
-int ReduceGeneric::binaryOperator(int x, int y){ 
-    
-  return 0;
-    
-}
-
 int ReduceGeneric::reduce(vector<int> myVector){
 
   // base case
@@ -21,11 +11,9 @@ int ReduceGeneric::reduce(vector<int> myVector){
   // recursion case
   else{
 
-    if (binaryOperator(myVector.back(), myVector.front()) == myVector.front()){
-      myVector.pop_back();
-    }else if(binaryOperator(myVector.back(), myVector.front()) == myVector.back()){
-      myVector.erase(myVector.begin());
-    }
+    myVector.insert(myVector.begin(),binaryOperator(myVector.at(myVector.size()-1), myVector.at(myVector.size()-2)));
+    myVector.pop_back();
+    myVector.pop_back();
 
     // recursively process the remaining elements.
     return reduce(myVector);

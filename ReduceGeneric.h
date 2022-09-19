@@ -7,10 +7,9 @@
 class ReduceGeneric{
 
     private:
-    int virtual binaryOperator(int x, int y);
+    virtual int binaryOperator(int x, int y) = 0;
 
     public:
-    ReduceGeneric();
     int reduce(std::vector<int> myVector);
 
 };

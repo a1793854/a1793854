@@ -15,7 +15,7 @@ bool FilterForTwoDigitPositive::g(int x){
     counting++;
   }
 
-  if ((counting == 2) || (x < 0 )){
+  if ((counting != 2) || (x < 0 )){
     return true;
   }else {
     return false;
