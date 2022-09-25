@@ -36,32 +36,8 @@ Individual* temp2 = new Individual(0);
 temp1 = execute(str1, bit_flip, k1);
 temp2 = execute(str2, rearrange, k2);
 
-
-int len = temp2->getLength();
-int count = 0;
-int streak = 0;
-for(int i = 1; i < (len + 1) ; i++){
-
-    if(temp2->getBit(i) == 1){
-
-        count++;
-
-    }else {
-
-        count = 0;
-        
-    }
-
-    if(count > streak){
-
-        streak = count;
-
-    }
-
-}
-
 cout << temp1->getString() << " " << temp2->getString() << " ";
-cout << streak;
+cout << temp2->getMaxOnes();
 
 }
 

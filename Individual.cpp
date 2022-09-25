@@ -63,6 +63,37 @@ void Individual::flipBit(int pos){
     }
 }
 
+int Individual::getMaxOnes(){
+
+    int len = binaryString.length();
+
+    int count = 0; // counter
+    int streak = 0; // streak holder
+
+    for(int i = 0; i < len ; i++){
+
+        if(binaryString.at(i) == '1'){
+
+            count++;
+
+        }else {
+
+            count = 0;
+            
+        }
+
+        if(count > streak){
+
+            streak = count;
+
+        }
+
+    }
+
+    return streak;
+
+}
+
 int Individual::getLength(){
 
     int len = binaryString.length();

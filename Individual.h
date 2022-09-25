@@ -14,6 +14,7 @@ class Individual {
     std::string getString();
     int getBit(int pos);
     void flipBit(int pos);
+    int getMaxOnes();
     int getLength();
 
 };
