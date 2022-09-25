@@ -1,0 +1,35 @@
+#include "BitFlipProb.h"
+using namespace std;
+
+BitFlipProb::BitFlipProb(double probability){ 
+  p = probability;
+}
+
+Individual BitFlipProb::mutate(Individual binary, int k){ 
+
+  // seed
+  srand(time(0));
+
+  // length of list
+  int listLength = binary.getLength();
+
+  // random probability
+  float random;
+
+  for (int i = 1; i < (listLength + 1); i++) {
+  
+    random = rand() % 100 + 1;
+
+    cout << random << "\n";
+
+    if ((random/100) <= p){
+
+      binary.flipBit(i);
+
+    }
+
+  }
+
+  return binary;
+   
+}
