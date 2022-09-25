@@ -13,7 +13,6 @@ Individual BitFlip::mutate(Individual binary, int k){
     k = k - listLength;
 
   }
-
      binary.flipBit(k);
 
   return binary;

@@ -7,7 +7,6 @@
 class Rearrange: public Mutator {
 
     public:
-    Rearrange();
     Individual mutate(Individual binary, int k);
 
 };

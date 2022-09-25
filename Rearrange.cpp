@@ -3,10 +3,6 @@
 #include <string>
 using namespace std;
 
-Rearrange::Rearrange(){ 
-    
-}
-
 Individual Rearrange::mutate(Individual binary, int k){ 
 
   // index

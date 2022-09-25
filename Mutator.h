@@ -7,7 +7,7 @@
 class Mutator{
 
   public:
-    virtual Individual mutate(Individual binary, int k) = 0;
+  virtual Individual mutate(Individual binary, int k) = 0;
 
 };
 
