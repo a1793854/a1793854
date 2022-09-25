@@ -7,7 +7,6 @@
 class BitFlip: public Mutator {
 
     public:
-    BitFlip();
     Individual mutate(Individual binary, int k);
 
 };

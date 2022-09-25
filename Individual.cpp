@@ -18,7 +18,7 @@ Individual::Individual(int length) {
 
 Individual::Individual(string dnaString){
 
-    //  Creates a new Individual with an identical list
+    // Creates a new Individual with an identical list
     binaryString = dnaString;
 
 }

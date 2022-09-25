@@ -3,10 +3,6 @@
 #include <string>
 using namespace std;
 
-BitFlip::BitFlip(){ 
-    
-}
-
 Individual BitFlip::mutate(Individual binary, int k){ 
 
   int listLength = binary.getLength();
