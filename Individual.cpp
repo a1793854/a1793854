@@ -70,7 +70,7 @@ int Individual::getMaxOnes(){
     int count = 0; // counter
     int streak = 0; // streak holder
 
-    for(int i = 0; i < len ; i++){
+    for(int i = 0; i < len; i++){
 
         if(binaryString.at(i) == '1'){
 

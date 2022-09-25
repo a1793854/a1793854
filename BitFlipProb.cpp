@@ -24,8 +24,6 @@ Individual BitFlipProb::mutate(Individual binary, int k){
   
     random = rand() % 100 + 1;
 
-    cout << random << "\n";
-
     if ((random/100) <= p){
 
       binary.flipBit(i);
