@@ -1,5 +1,8 @@
 #include "Individual.h"
+#include <iostream>
+#include <string>
 using namespace std;
+
 
 Individual::Individual(int length) {
 

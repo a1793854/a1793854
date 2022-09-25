@@ -1,4 +1,6 @@
 #include "BitFlip.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 BitFlip::BitFlip(){ 
