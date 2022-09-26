@@ -1,6 +1,6 @@
 #ifndef REARRANGE_H
 #define REARRANGE_H
-#include "individual.h"
+#include "Individual.h"
 #include "Mutator.h"
 #include <iostream>
 #include <string>

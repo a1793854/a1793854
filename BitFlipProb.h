@@ -1,6 +1,6 @@
 #ifndef BITFLIPPROB_H
 #define BITFLIPPROB_H
-#include "individual.h"
+#include "Individual.h"
 #include "Mutator.h"
 #include <iostream>
 #include <string>

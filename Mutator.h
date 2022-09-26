@@ -1,6 +1,6 @@
 #ifndef MUTATOR_H
 #define MUTATOR_H
-#include "individual.h"
+#include "Individual.h"
 #include <iostream>
 #include <string>
 
