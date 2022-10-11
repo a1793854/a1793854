@@ -1,21 +1,25 @@
 #include "Node.h"
 #include "LinkedList.h"
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 int main(void) {
 
-    LinkedList* a = new LinkedList();
+    // take inputs
+    int array[100];
 
-    a->addFront(1);
-    a->addFront(2);
-    a->addEnd(4);
-    a->addEnd(3);
+    
 
-    cout << "Elements of the list are: ";
+    cout << array[1];
+
+    // int b[3] = {1, 2, 3};
+    // LinkedList* a = new LinkedList(b, 2);
+
+    // cout << "Elements of the list are: ";
   
-    // Print the list
-    a->printItems();
-    cout << endl;
+    // // Print the list
+    // a->printItems();
+    // cout << endl;
 }
 

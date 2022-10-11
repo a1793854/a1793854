@@ -9,12 +9,17 @@ class LinkedList{
   
   public:
   LinkedList();
+  LinkedList(int array[], int size);
   void addFront(int newItem);
   void addEnd(int newItem);
+  void addAtPosition(int position, int newItem);
   void deleteFront();
   void deleteEnd();
-  void printItems();
   void deletePosition(int position);
+  void printItems();
+  int search(int item);
+  int getItem(int position);
+  ~LinkedList();
 
 };
 
