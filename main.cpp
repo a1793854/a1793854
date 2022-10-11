@@ -1,40 +1,21 @@
-#include "Sort.h"
-#include "BubbleSort.h"
-#include "QuickSort.h"
-#include "RecursiveBinarySearch.h"
-#include <sstream>
-#include <vector>
+#include "Node.h"
+#include "LinkedList.h"
+#include <iostream>
 using namespace std;
 
 int main(void) {
 
-    Sort* a = new QuickSort();
-    RecursiveBinarySearch* b = new RecursiveBinarySearch();
-    bool x;
+    LinkedList* a = new LinkedList();
 
-    // take inputs
-    string line;
-    int number;
-    vector<int> numbers;
+    a->addFront(1);
+    a->addFront(2);
+    a->addEnd(4);
+    a->addEnd(3);
 
-    getline(cin, line);
-    istringstream stream(line);
-    while (stream >> number)
-        numbers.push_back(number);
-    
-    // sort
-    vector<int> newVector;
-    newVector = a->sort(numbers);
-    x = b->search(newVector, 1);
-
-    if(x == true){
-         cout << "true" << " ";
-    }else if(x == false){
-         cout << "false" << " ";
-    }
-
-    for(size_t i = 0; i < newVector.size(); i++){
-        cout << newVector.at(i) << " ";
-    }
+    cout << "Elements of the list are: ";
+  
+    // Print the list
+    a->printItems();
+    cout << endl;
 }
 
