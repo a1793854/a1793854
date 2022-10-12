@@ -11,10 +11,24 @@ head = NULL;
 
 LinkedList::LinkedList(int array[], int size){
 
-    head = NULL;
+    if(size <= 0){
+        head = NULL;
+    }
 
-    for(int i = 0; i < size + 1; i++){
-        addEnd(array[i]);
+    int i = 0;
+    Node *temp = new Node();
+    Node* nodex = new Node();
+    nodex->set_data(array[i]);
+    head = nodex;
+    temp = head;
+
+    for(int i = 1; i < size; i++){
+        Node* newNode = new Node();
+        newNode->set_data(array[i]);
+        newNode->set_next(NULL);
+
+        temp->set_next(newNode);
+        temp = temp->get_next();
     }
 
 }
@@ -39,6 +53,7 @@ void LinkedList::addEnd(int newItem){
 
     Node* newNode = new Node();
     newNode->set_data(newItem);
+    newNode->set_next(NULL);
 
     // Make node head if empty
     if (head == NULL) {
@@ -98,7 +113,7 @@ void LinkedList::addAtPosition(int position, int newItem){
     // New node
     Node* newNode = new Node();
     newNode->set_data(newItem);
-    newNode->set_next(NULL);
+    //newNode->set_next(NULL);
 
     // If position is one
     if (position == 1) {
