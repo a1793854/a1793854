@@ -35,8 +35,6 @@ string preToInfix(string expression) {
   // Operator and operand counter
   int operator_count = 0;
   int operand_count = 0;
-  int operator_count2 = 0;
-  int operand_count2 = 0;
 
   for (int k = 0; k < length; k++){
 
@@ -48,20 +46,36 @@ string preToInfix(string expression) {
 
   }
 
-  for (int k = 0; k < length - 2; k++){
 
-    if(isOperator(expression[k]) == true){
-      operator_count2++;
-    }else if(isdigit(expression[k]) == 1){
-      operand_count2++;
-    }
+  int opcount = 0; // operator counter
+  int opstreak = 0; // operator streak holder
+  int digcount = 0; // digit counter
 
+  for(int l = 0; l < length; l++){
+
+      if(isOperator(expression[l]) == true){
+
+          digcount = 0;
+          opcount++;
+
+      }else if(isdigit(expression[l]) == true){
+
+          opcount = 0;
+          digcount++;
+      }
+
+      if(opcount > opstreak){
+
+        opstreak = opcount;
+
+      }
+         
   }
-  
+
   // Check if expression is valid 
   // if total number of operands is not one more than the number of operators
   // Any prefix of the expression not including the last two symbols must contain no less operators than operands.
-  if((operand_count != operator_count + 1) || (operand_count2 < operator_count2)){
+  if((operand_count != operator_count + 1) || (opstreak == digcount)){
 
     return "Error";
 
