@@ -58,7 +58,9 @@ string preToInfix(string expression) {
 
   }
   
-  // Check if expression is valid (if total number of operands is not one more than the number of operators)
+  // Check if expression is valid 
+  // if total number of operands is not one more than the number of operators
+  // Any prefix of the expression not including the last two symbols must contain no less operators than operands.
   if((operand_count != operator_count + 1) || (operand_count2 < operator_count2)){
 
     return "Error";
@@ -96,6 +98,9 @@ string preToInfix(string expression) {
               value.push(operand_1 * operand_2);
               break;
           case '/':
+              if(operand_2 == 0){
+                return "Error";
+              }
               value.push(operand_1 / operand_2);
               break;
           }
