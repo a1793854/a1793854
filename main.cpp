@@ -27,7 +27,7 @@ bool isOperator(char a) {
 string preToInfix(string expression) {
 
   stack<string> new_str;
-  stack<int> value;
+  stack<float> value;
 
   // Expression length
   int length = expression.size();
@@ -95,9 +95,9 @@ string preToInfix(string expression) {
       }else { // If operator
       
           // Pop two operands from value
-          int operand_1 = value.top();
+          float operand_1 = value.top();
           value.pop();
-          int operand_2 = value.top();
+          float operand_2 = value.top();
           value.pop();
 
           // Evaulate depending on operator
@@ -172,8 +172,7 @@ string preToInfix(string expression) {
 }
  
 int main() {
-  //string pre_exp = "* 3 - 5 + 4 3";
-  
+
   string pre_exp;
 
   getline(cin, pre_exp);
