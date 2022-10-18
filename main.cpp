@@ -26,9 +26,6 @@ bool isOperator(char a) {
 // Convert string prefix to infix expressions
 string preToInfix(string expression) {
 
-  stack<string> new_str;
-  stack<float> value;
-
   // Expression length
   int length = expression.size();
 
@@ -75,11 +72,14 @@ string preToInfix(string expression) {
   // Check if expression is valid 
   // if total number of operands is not one more than the number of operators
   // Any prefix of the expression not including the last two symbols must contain no less operators than operands.
-  if((operand_count != operator_count + 1) || (opstreak == digcount)){
+  if((operand_count != operator_count + 1) || (opstreak == digcount) || (length == 1)){
 
     return "Error";
 
   }
+
+  // CALCULATE VALUE ---------------------------------------------
+  stack<double> value;
 
   // Remove all spaces from string
   expression.erase(remove(expression.begin(), expression.end(), ' '), expression.end());
@@ -95,9 +95,9 @@ string preToInfix(string expression) {
       }else { // If operator
       
           // Pop two operands from value
-          float operand_1 = value.top();
+          double operand_1 = value.top();
           value.pop();
-          float operand_2 = value.top();
+          double operand_2 = value.top();
           value.pop();
 
           // Evaulate depending on operator
@@ -123,6 +123,9 @@ string preToInfix(string expression) {
  
   // Convert the value to string
   string val = to_string(value.top());
+
+  // CONVERT ---------------------------------------------
+  stack<string> new_str;
 
   // Read reverse
   for (int j = length - 1; j >= 0; j--) {
