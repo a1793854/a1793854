@@ -79,7 +79,7 @@ string preToInfix(string expression) {
   }
 
   // CALCULATE VALUE ---------------------------------------------
-  stack<double> value;
+  stack<int> value;
 
   // Remove all spaces from string
   expression.erase(remove(expression.begin(), expression.end(), ' '), expression.end());
@@ -95,9 +95,9 @@ string preToInfix(string expression) {
       }else { // If operator
       
           // Pop two operands from value
-          double operand_1 = value.top();
+          int operand_1 = value.top();
           value.pop();
-          double operand_2 = value.top();
+          int operand_2 = value.top();
           value.pop();
 
           // Evaulate depending on operator
@@ -124,12 +124,10 @@ string preToInfix(string expression) {
   // Convert the value to string
   string val = to_string(value.top());
 
-  // if((isdigit(expression[0]) == true) && length == 1){
-    
-  //     string s = expression[0] + " = " + val;
-  //     return s;
-
-  // }
+  if(length == 1 && (isdigit(expression[0]) == 1)){
+    string s = val + " = " + val;
+    return s;
+  }
 
   // CONVERT ---------------------------------------------
   stack<string> new_str;
