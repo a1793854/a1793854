@@ -124,7 +124,7 @@ string preToInfix(string expression) {
   // Convert the value to string
   string val = to_string(value.top());
 
-  // check if only one value
+  // Check if only one value
   if(length == 1 && (isdigit(expression[0]) == 1)){
     string s = val + " = " + val;
     return s;
@@ -136,8 +136,8 @@ string preToInfix(string expression) {
   // Read reverse
   for (int j = length - 1; j >= 0; j--) {
 
-    // Check if operator and not the end 
-    if (isOperator(expression[j]) && j != 0) {
+    // Check + or -
+    if ((expression[j] == '+' || expression[j] == '-') && j != 0) {
  
       // Pop two operands from value
       string op1 = new_str.top();   new_str.pop();
@@ -150,7 +150,20 @@ string preToInfix(string expression) {
       new_str.push(temp);
 
     }
-    
+
+    // Check / or *
+    else if ((expression[j] == '/' || expression[j] == '*') && j != 0){
+      // Pop two operands from value
+      string op1 = new_str.top();   new_str.pop();
+      string op2 = new_str.top();   new_str.pop();
+ 
+      // Concatenate operator and operands
+      string temp = op1 + ' ' + expression[j] + ' ' + op2 ;
+ 
+      // Push concatenation to stack
+      new_str.push(temp);
+    }
+
     // If it is an operator and is the end
     else if (isOperator(expression[j]) && j == 0) { 
  
