@@ -159,7 +159,7 @@ string preToInfix(string expression) {
       string op2 = new_str.top();   new_str.pop();
  
       // Concatenate operator, operands, and value
-      string temp = "(" + op1 + ' ' + expression[j] + ' ' + op2 + ")" + " = " + val;
+      string temp = op1 + ' ' + expression[j] + ' ' + op2 + " = " + val;
 
       // Push concatenation to stack
       new_str.push(temp);
