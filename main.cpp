@@ -124,12 +124,12 @@ string preToInfix(string expression) {
   // Convert the value to string
   string val = to_string(value.top());
 
-  if((isdigit(expression[0]) == true) && length == 1){
+  // if((isdigit(expression[0]) == true) && length == 1){
     
-      string s = expression[0] + " = " + val;
-      return s;
+  //     string s = expression[0] + " = " + val;
+  //     return s;
 
-  }
+  // }
 
   // CONVERT ---------------------------------------------
   stack<string> new_str;
