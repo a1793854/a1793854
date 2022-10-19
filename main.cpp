@@ -72,7 +72,7 @@ string preToInfix(string expression) {
   // Check if expression is valid 
   // if total number of operands is not one more than the number of operators
   // Any prefix of the expression not including the last two symbols must contain no less operators than operands.
-  if((operand_count != operator_count + 1) || (opstreak == digcount) || (length == 1)){
+  if((operand_count != operator_count + 1) || (opstreak == digcount)){
 
     return "Error";
 
@@ -123,6 +123,13 @@ string preToInfix(string expression) {
  
   // Convert the value to string
   string val = to_string(value.top());
+
+  if((isdigit(expression[0]) == true) && length == 1){
+    
+      string s = expression[0] + " = " + val;
+      return s;
+
+  }
 
   // CONVERT ---------------------------------------------
   stack<string> new_str;
