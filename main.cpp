@@ -124,6 +124,7 @@ string preToInfix(string expression) {
   // Convert the value to string
   string val = to_string(value.top());
 
+  // check if only one value
   if(length == 1 && (isdigit(expression[0]) == 1)){
     string s = val + " = " + val;
     return s;
@@ -150,7 +151,7 @@ string preToInfix(string expression) {
 
     }
     
-    // If is operator and is the end
+    // If it is an operator and is the end
     else if (isOperator(expression[j]) && j == 0) { 
  
       // Pop two operands from value
@@ -158,8 +159,8 @@ string preToInfix(string expression) {
       string op2 = new_str.top();   new_str.pop();
  
       // Concatenate operator, operands, and value
-      string temp = op1 + ' ' + expression[j] + ' ' + op2 + " = " + val;
- 
+      string temp = "(" + op1 + ' ' + expression[j] + ' ' + op2 + ")" + " = " + val;
+
       // Push concatenation to stack
       new_str.push(temp);
 
